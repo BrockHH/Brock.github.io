@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-29T14:11:07.598Z</updated>
+  <updated>2020-07-29T15:30:37.950Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3-1问题D</title>
+    <link href="http://yoursite.com/2020/07/29/3-1%E9%97%AE%E9%A2%98D/"/>
+    <id>http://yoursite.com/2020/07/29/3-1%E9%97%AE%E9%A2%98D/</id>
+    <published>2020-07-29T15:25:01.000Z</published>
+    <updated>2020-07-29T15:30:37.950Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题-D-比较奇偶数个数"><a href="#问题-D-比较奇偶数个数" class="headerlink" title="问题 D: 比较奇偶数个数"></a>问题 D: 比较奇偶数个数</h3><p><strong>Codeup链接：</strong><a href="http://codeup.cn/problem.php?cid=100000575&pid=3" target="_blank" rel="noopener">http://codeup.cn/problem.php?cid=100000575&amp;pid=3</a></p><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>第一行输入一个数，为n，第二行输入n个数，这n个数中，如果偶数比奇数多，输出NO，否则输出YES。</p><h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><p>输入有多组数据。<br>每组输入n，然后输入n个整数（1&lt;=n&lt;=1000）。</p><h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><p>如果偶数比奇数多，输出NO，否则输出YES。</p><h4 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">67 </span><br><span class="line">7</span><br><span class="line">0 69 24 78 58 62 64</span><br></pre></td></tr></table></figure><h4 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure><p><strong>完整代码：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF)&#123;</span><br><span class="line"><span class="keyword">int</span> a[n];</span><br><span class="line"><span class="keyword">int</span> num_j=<span class="number">0</span>,num_o=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//输入n个数 </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line"><span class="comment">//记录奇偶个数</span></span><br><span class="line"><span class="keyword">if</span>(a[i]%<span class="number">2</span>==<span class="number">0</span>)</span><br><span class="line">num_o++;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">num_j++; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出YES,NO </span></span><br><span class="line"><span class="keyword">if</span>(num_j&lt;num_o)</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;问题-D-比较奇偶数个数&quot;&gt;&lt;a href=&quot;#问题-D-比较奇偶数个数&quot; class=&quot;headerlink&quot; title=&quot;问题 D: 比较奇偶数个数&quot;&gt;&lt;/a&gt;问题 D: 比较奇偶数个数&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Codeup链接：&lt;/strong&gt;&lt;a
+      
+    
+    </summary>
+    
+    
+      <category term="Codeup" scheme="http://yoursite.com/categories/Codeup/"/>
+    
+    
+      <category term="算法笔记学习日记" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>3-1问题C</title>
