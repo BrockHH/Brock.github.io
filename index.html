@@ -19,15 +19,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="星仔学习日记">
+  <meta name="description" content="我们都努力着">
+<meta property="og:type" content="website">
+<meta property="og:title" content="星仔学习笔记">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="星仔学习日记">
+<meta property="og:site_name" content="星仔学习笔记">
+<meta property="og:description" content="我们都努力着">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="星仔">
+<meta property="article:tag" content="星仔学习笔记">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/">
@@ -43,11 +46,11 @@
   };
 </script>
 
-  <title>星仔学习日记</title>
+  <title>星仔学习笔记</title>
   
 
 
-  <script>
+  <script data-pjax>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -83,7 +86,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="星仔学习日记" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="星仔学习笔记" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -104,13 +107,14 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">星仔学习日记</h1>
+      <h1 class="site-title">星仔学习笔记</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -155,11 +159,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -169,6 +200,8 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -185,13 +218,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/31/B1012%20%E6%95%B0%E5%AD%97%E5%88%86%E7%B1%BB%20(20%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -205,10 +238,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-07-31 21:46:01 / 修改时间：21:55:56" itemprop="dateCreated datePublished" datetime="2020-07-31T21:46:01+08:00">2020-07-31</time>
+              <time title="创建时间：2020-07-31 21:46:01" itemprop="dateCreated datePublished" datetime="2020-07-31T21:46:01+08:00">2020-07-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-01 18:20:11" itemprop="dateModified" datetime="2020-08-01T18:20:11+08:00">2020-08-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -310,13 +349,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/31/B1008%20%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB%E9%97%AE%E9%A2%98%20(20%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -372,7 +411,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>715</span>
+              <span>721</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -392,7 +431,7 @@
 
       
           <h2 id="B1008-数组元素循环右移问题-20分"><a href="#B1008-数组元素循环右移问题-20分" class="headerlink" title="B1008 数组元素循环右移问题 (20分)"></a>B1008 数组元素循环右移问题 (20分)</h2><p><strong>PTA链接：</strong><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805316250615808" target="_blank" rel="noopener">https://pintia.cn/problem-sets/994805260223102976/problems/994805316250615808</a></p>
-<p>一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A*</em>N<em>−1）变换为（</em>A<strong>N<em>−</em>M<em>⋯</em>A</strong>N<em>−1</em>A<em>0</em>A<em>1⋯</em>A*<em>N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
+<p>一个数组<em>A</em>中存有<em>N</em>（&gt;0）个整数，在不允许使用另外数组的前提下，将每个整数循环向右移<em>M</em>（≥0）个位置，即将<em>A</em>中的数据由（<em>A</em>0<em>A</em>1⋯<em>A**N</em>−1）变换为（<em>A**N</em>−<em>M</em>⋯<em>A**N</em>−1<em>A</em>0<em>A</em>1⋯<em>A**N</em>−<em>M</em>−1）（最后<em>M</em>个数循环移至最前面的<em>M</em>个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
 <h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>每个输入包含一个测试用例，第1行输入<em>N</em>（1≤<em>N</em>≤100）和<em>M</em>（≥0）；第2行输入<em>N</em>个整数，之间用空格分隔。</p>
 <h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出循环右移<em>M</em>位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。</p>
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 2</span><br><span class="line">1 2 3 4 5 6</span><br></pre></td></tr></table></figure>
@@ -423,13 +462,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/31/B1046%20%E5%88%92%E6%8B%B3%20(15%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -540,13 +579,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/31/B1026%20%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%20(15%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -654,13 +693,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/31/B1016%20%E9%83%A8%E5%88%86A+B%20(15%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -778,13 +817,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/30/B1011%20A+B%20%E5%92%8C%20C%20(15%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -897,13 +936,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/28/B1032%20%E6%8C%96%E6%8E%98%E6%9C%BA%E6%8A%80%E6%9C%AF%E5%93%AA%E5%AE%B6%E5%BC%BA%20(20%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1014,13 +1053,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/28/B1001%20%E5%AE%B3%E6%AD%BB%E4%BA%BA%E4%B8%8D%E5%81%BF%E5%91%BD%E7%9A%84(3n+1)%E7%8C%9C%E6%83%B3%20(15%E5%88%86)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.png">
       <meta itemprop="name" content="星仔">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="我们都努力着">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星仔学习日记">
+      <meta itemprop="name" content="星仔学习笔记">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1184,8 +1223,10 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="星仔"
+      src="/images/avatar1.png">
   <p class="site-author-name" itemprop="name">星仔</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">我们都努力着</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -1285,6 +1326,7 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -1298,11 +1340,72 @@
 
 <script src="/js/next-boot.js"></script>
 
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
 
 
 
   
-  <script>
+  <script data-pjax>
     (function(){
       var canonicalURL, curProtocol;
       //Get the <link> tag
@@ -1331,6 +1434,8 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
 
 
 
@@ -1342,6 +1447,9 @@
 
 
 
+
+
+    <div id="pjax">
   
 
   
@@ -1375,5 +1483,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
+    </div>
 </body>
 </html>
